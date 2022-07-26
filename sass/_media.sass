@@ -1,0 +1,256 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+  .blocks1__title
+    font-size: 24px
+  .blocks1__paragraph
+    font-size: 14px
+// ≥992px
++media-breakpoint-down(md)
+  .top-info__separator
+    margin-right: 10px
+    margin-left: 10px
+  .top-info
+    background-color: #6dc0c6
+  .header__burger
+    display: block
+
+  .top-menu::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #5e5373
+    z-index: 2
+
+  .menu
+    position: fixed
+    top: -400%
+    left: 0
+    width: 100%
+    height: 70vh
+    background-color:  $accent
+    transition: all .8s ease
+    overflow: scroll
+  .menu__item
+  .menu__list
+    display: flex
+    flex-direction: column
+    width: 100%
+    margin: 40px
+  .menu__link
+    color: #fff
+    text-decoration: none
+    transition: all .3s ease
+    padding: 10px 19px 14px 31px
+    background-color: #1ea4d0
+    width: 100%
+    display: block
+    transition: all .35s ease
+    white-space: normal
+    border-bottom: 1px solid #4fc2e8
+    z-index: 2
+    line-height: 28px
+    &:hover, &:active
+      color: #fff
+      background-color: #4fc2e8
+      text-decoration: none
+  .menu.active
+    top: 134px
+
+  .top-menu::before
+    content: ''
+    width: 100%
+    left: 0
+    top: 0
+    right: 0
+    z-index: 2
+    background-color: #3baed4
+  .logo
+    z-index: 3
+  .header__burger
+    z-index: 3
+  body.lock
+    overflow: hidden
+  .top-menu__inner
+    padding-bottom: 15px
+
+
+  .menu
+    &__sub-list
+      display: block
+      position: relative
+      top: 0
+    &__sub-link
+      color: #fff
+      text-decoration: none
+      transition: all .3s ease
+      padding: 15px 19px 14px 31px
+      background-color: #1ea4d0
+      width: 100%
+      display: block
+      position: relative
+      padding-left: 50px
+      //margin: 40px
+    &__sub-item
+
+  .blocks__item, .blocks__item
+    flex-direction: column
+  .first-block1, .first-block3, .second-block, .first-block2
+    max-width: 100%
+  .first-block__img
+    display: none
+  .slider__items
+    margin: 90px
+  .footer__top
+    flex-direction: column
+  .footer__inst
+    margin: 50px 10px
+  .footer__menu
+    margin: 0 60px
+  .second-block
+    padding: 80px 20px 80px 0
+  .aside-box__pattern
+    margin-left: 14px
+  .footer__time
+    margin-left: 0
+  .dermat__box
+    flex-direction: column
+  .dermat__box-pic, .dermat__box-txt
+    flex-basis: 100%
+  .dermat__box-pic
+    margin: 0 auto
+  .contacts__first
+    flex-direction: column
+  .contacts__application
+    flex-basis: 100%
+    margin-right: 0
+  .contacts__box-search
+    flex-basis: 100%
+    margin-top: 30px
+
+
+// ≥768px
++media-breakpoint-down(sm)
+  .top-menu
+    position: fixed
+  .top-menu__inner
+    margin-top: -11px
+    padding-bottom: 10px
+  .header__burger
+    top: 27px
+  .top-info
+    display: none
+  .menu.active
+    top: 73px
+  .top-info__separator
+    display: none
+  .welcome__items
+    flex-direction: column
+  .welcome__inner, .aside-box
+    max-width: 100%
+  .aside-box__pattern
+    margin-left: 0
+    margin-top: 40px
+  .blocks
+    margin: 50px 0
+  .aside-box__pattern
+    max-width: 100%
+
+
+// ≥576px
++media-breakpoint-down(xs)
+  .blocks2__title
+    font-size: 30px
+  .q__title
+    font-size: 22px
+  .q__solid
+    font-size: 19px
+  .slider__items
+    margin: 0px 10px
+  .slider__items
+    white-space: normal
+  .slider__title
+    font-size: 40px
+  .title__thick
+    font-size: 32px
+  .first-block1
+    padding: 50px 28px
+  .blocks2__img
+    display: none
+  .second-block
+    padding: 70px 20px
+  .blocks2__sub-title
+    font-size: 19px
+  .blocks2__paragraph
+    font-size: 14px
+  .footer__carousel
+    max-width: 210px
+    height: 210px
+  .footer__img
+    max-width: 210px
+  .footer
+    margin-top: 50px
+  .text-public
+    width: 100%
+  .footer__top
+    padding: 40px 0
+  .welcome__paragraph, .welcome__sub-title, .welcome__title
+    text-align: center
+  .first-block3
+    padding: 80px 20px
+  .der-block
+    flex-direction: column-reverse
+  .der-block__text
+    max-width: 100%
+    margin-right: 0
+  .der-block__sub-title
+    text-align: center
+    font-size: 23px
+  .welcome__paragraph
+    font-size: 14px
+  .dermat__box-txt
+    margin-right: 0
+  .form-block
+    flex-direction: column
+  .form-block-itm:nth-child(1)
+    margin-right: 0
+    margin-bottom: 20px
+  .main__pic
+    height: 300px
+  .main__title
+    top: 158px
+  .contacts
+  	margin-bottom: -57px
+  .contacts__first
+    margin-bottom: 10px
+  .slider
+    height: 550px
+
+
+
+
+@media (max-width:340px)
+  .header__burger
+    right: 21px
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
